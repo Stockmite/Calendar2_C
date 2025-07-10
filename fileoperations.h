@@ -2,14 +2,22 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-void SkipLine(FILE* file) {
+#define Predetermined_buffer 15
+
+void SkipLine(FILE* file) { //Yes, these functions are meant for 'r' and other similar file handling modes
 
     char b = 'b';
 
-    while (b != EOF || b != '\n') {
+    while ((b != EOF) || (b != '\n')) {
 
         b = fgetc(file);
 
     }
+
+}
+
+void GetWord(FILE* file) {
+
+    
 
 }
